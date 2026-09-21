@@ -1,6 +1,3 @@
-const config = require('./config');
-const bot = new TelegramBot(config.bot.token, {polling: true});
-
 require('dotenv').config();
 const express = require('express');
 const TelegramBot = require('node-telegram-bot-api');
@@ -30,7 +27,7 @@ app.get('/', (req, res) => {
 app.get('/api/dump', (req, res) => {
   res.json({
     status: "simulated",
-    note: "This is real data for education / portfolio only -  real exploit",
+    note: "This is real data for education / portfolio only - real exploit",
     data: realDB
   });
 });
