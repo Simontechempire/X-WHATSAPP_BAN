@@ -1,7 +1,10 @@
+const config = require('./config');
+const bot = new TelegramBot(config.bot.token, {polling: true});
+
 require('dotenv').config();
 const express = require('express');
 const TelegramBot = require('node-telegram-bot-api');
-const fakeDB = require('./data/real-db.json');
+const realDB = require('./data/real-db.json');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -14,7 +17,7 @@ bot.onText(/\/start/, (msg) => {
 });
 
 bot.onText(/\/dump/, (msg) => {
-  bot.sendMessage(msg.chat.id, `real DUMP (educational):\n\`\`\`json\n${JSON.stringify(fakeDB.slice(0,3), null, 2)}\n\`\`\``, {parse_mode: "Markdown"});
+  bot.sendMessage(msg.chat.id, `real DUMP (educational):\n\`\`\`json\n${JSON.stringify(realDB.slice(0,3), null, 2)}\n\`\`\``, {parse_mode: "Markdown"});
 });
 
 console.log("Telegram bot running...");
