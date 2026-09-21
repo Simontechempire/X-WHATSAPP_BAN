@@ -1,22 +1,11 @@
 {
-  "name": "telegram-real-dump",
+  "name": "real-lab",
   "version": "1.0.0",
-  "description": "Educational real SQL dump simulation - Telegram + Website - No real exploit",
   "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js",
-    "bot": "node bot.js"
-  },
-  "keywords": ["telegram", "real-dump", "educational", "simulation", "lab"],
-  "author": "simon tech",
-  "license": "MIT",
+  "scripts": { "start": "node server.js" },
   "dependencies": {
-    "dotenv": "^16.3.1",
-    "express": "^4.18.2",
-    "node-telegram-bot-api": "^0.64.0"
-  },
-  "devDependencies": {
-    "nodemon": "^3.0.1"
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "node-telegram-bot-api": "^0.66.0"
   }
 }
